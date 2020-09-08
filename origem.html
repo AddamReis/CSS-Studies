@@ -5,11 +5,20 @@
     <meta charset="UTF-8">
     <title>Origem CSS: Externo, Interno e Inline</title>
     <style>
-        /* ... */
+        body {
+            background-color: aquamarine;
+        }
     </style>
+    <link rel="stylesheet" href="css/externo.css"> <!--Acessando arquivo externo-->
+    <!--A preferencia é definida pelo ultimo item processado, neste caso, só é possível aplicar a cor Gold pois, 
+        além de estar definido por último, contém a relação no corpo da importação {rel="stylesheet"},
+        sem isso o css externo não seria aplicado-->
+
+    <!--inLine tem preferencia sobre os outros estilos-->
+    <!--A forma apropriada de definir um css é dentro do head-->
 </head>
 
-<body>
+<body style="background-color:coral;"> <!--Propriedade inLine pode ser aplicada porém não é recomendado-->
     <h1>E agora?</h1>
 </body>
 
