@@ -6,7 +6,27 @@
     <title>CSS Selectors</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        section > :nth-child(even) {
+            color: #ff0;
+            background-color: #f77;
+        }
+        /*
+        * | seletor universal (selecionou todos elementos e aplicou a estilização)
+        .tag | seletor de classe (estilizou tudo menos o body )
+        #aprovados | selector de id (estiliza todos com #id informado)
+        #aninhado > div | pega a div filha 1º grau (se existir) que esteja dentro de #aninhado
+        #aninhado > section | pega a section filha 1º grau (se existir) que esteja dentro do id
+        #aninhado section | pega qualquer section que esteja dentro do id
+        p + ul | (seletor de adjacentes), pega ultimo elemento que esteja na sequencia (neste caso o ul), seletor de irmãos
+        p ~ ol | seleciona o elemento "ol" que tenha um irmão "p" e que sejam filho do mesmo pai
+        [feira] | pega todos elementos que tem como propriedade "feira"
+        [feira=casa] | pega todos elementos que como tem propriedade "feira" cujo seu atributo é "casa"
+            *[feira~=casa] | mesma regra da linha acima, porém o "~" é semelhante ao like '%%' (estiliza se dentro do conjunto {casa velha} o atributos possuir o valor)
+            *[feira*=casa] | mesma regra da linha acima, porém pega parte do atributo (ca de casa por exemplo)
+        span:nth-child(1) | 1º filho de alguém que seja span
+        section > :nth-child(odd) | todos os filhos impares | (even) todos os filhos pares
+        section > span:nth-of-type(2) | estiliza segundo elemento do tipo span
+        */
     </style>
 </head>
 
@@ -29,7 +49,7 @@
             </ol>
             <div id='aninhado' class='tag'>
                 <div class="tag">
-                    <section class='tag'>
+                    <section class='tag nolabel'>
                         <span class='tag'>1</span>
                         <p class='tag'>2</p>
                         <span class='tag'>3</span>
