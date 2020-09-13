@@ -4,8 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Herança</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"> <!--Herdando fonts do google API-->
     <style>
-        /* ... */
+        body {
+            font-family: 'Oswald', sans-serif;
+            font-size: 40px;
+            border: solid 3px red;
+            padding: 50px;
+            margin: 10px 100px 150px 200px;
+        }
+
+        div {
+            border: inherit;
+            padding: inherit;
+        }
+        /*
+        Algumas propriedades por padrão são herdadas, outras não
+        Neste caso, usando o atributo 'inherit' estou herdando as espeficicações do body para a div
+        */
     </style>
 </head>
 
