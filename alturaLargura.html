@@ -5,9 +5,21 @@
     <meta charset="UTF-8">
     <title>Altura e Largura</title>
     <style>
+        html {
+            height: 100%; 
+            /*
+            Por padrão o html não oculpa todo o espaço da tela, mas sim de acordo com os elementos dentro
+            Neste caso, o tamanho do html é setado em 100% da tela, assim é possível trabalhar com % nos atributos div e span por exemplo.
+
+            Se o html não tivesse sido definido como 100%, o tamanho (altura) em % não iria ser efetivo neste caso, pois o html não todo o domensionamento da tela para poder aplicar a %
+            */
+        }
+
         body {
             font-size: 40px;
             background-color: coral;
+            height: 100%;
+            margin: 0;
         }
 
         div {
@@ -16,6 +28,14 @@
 
         span {
             background-color: dodgerblue;
+        }
+
+        span,
+        div {
+            width: 50%;
+            height: 250px;
+            height: 40%;
+            display: block; /*por padrão para o span, display é none, neste caso estou atribuindo o block e dessa forma é possível alterar as dimensões do mesmo*/
         }
     </style>
 </head>
