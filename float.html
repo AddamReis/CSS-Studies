@@ -11,18 +11,28 @@
 
         .c1 {
             background-color: red;
+            float: right; /*fica posicionado a direita*/
         }
-
+        
         .c2 {
             background-color: green;
+            clear: right; /*faz com que o elemento não ocupe a mesma linha para no mesmo posicionamento, neste caso como o red já está a direita, então foi para a linha seguinte*/
+            float: left;
         }
         
         .c3 {
             background-color: blue;
+            clear: both; /*limpa toda linha de flutuação*/
         }
 
         .c4 {
             background-color: orange;
+            float: right;
+        }
+
+        div {
+            height: 150px;
+            width: 150px;
         }
     </style>
 </head>
