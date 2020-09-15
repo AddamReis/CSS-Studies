@@ -4,8 +4,25 @@
     <meta charset="UTF-8">
     <title>Tamanho Box</title>
     <style>
+        * {
+            box-sizing: border-box;/*por padrão, o tamanho definido em 100% é culpado pelo body, porém, 
+            {border e padding} não é incluído nesta contagem, fazendo com que o tamanho passe de 100%.
+            
+            Box-sizing faz com que, o tamanho de 100% inclua o padding e border, assim não estrapolando o limite da tela
+            */
+        }
+        
         body {
             font-size: 45px;
+            margin: 0;
+        }
+
+        div {
+            background-color: deepskyblue;
+            width: 100%;
+            height: 300px;
+            padding: 100px;
+            border: solid 20px; 
         }
     </style>
 </head>
